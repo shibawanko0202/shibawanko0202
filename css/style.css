@@ -227,6 +227,9 @@ footer small{
   .skill li p{
     text-align: left;
   }
+  .skill li img{
+    margin-right: 0;
+  }
 }
 
 /* large */
