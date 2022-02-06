@@ -10,14 +10,14 @@
   <link rel="icon" href="img/pen.png">
 </head>
 <body>
-  <a class="top" href="#">TOP</a>
+  <a  id="top" class="top" href="#">TOP</a>
   
   <section class="hero">
     <div class="bgi">
       <div class="rgb">
         <header>
           <a href="#">
-            <h1>shibata.portfolio</h1>
+            <h1 id="title">shibata.portfolio</h1>
           </a>
           <a href="https://www.instagram.com/shibawanko0202/"><i class="bi bi-instagram"></i></a>
         </header>
@@ -47,7 +47,7 @@
   <section class="skill">
     <h1 id="skill">SKILL</h1>
     <ul>
-      <li>
+      <li class="sk">
         <img src="img/html5-css3.png" alt="HTML">
         <div>
           <h2>HTML/CSS</h2>
@@ -55,7 +55,7 @@
             現在使用しているエディタはVisual Studio Codeです。</p>
         </div>
       </li>
-      <li>
+      <li class="sk">
         <img src="img/js@2x.png" alt="JavaScript">
         <div>
           <h2>JavaScript</h2>
@@ -63,21 +63,21 @@
             現在もっとも勉強中の言語です。</p>
         </div>
       </li>
-      <li>
+      <li class="sk">
         <img src="img/ps@2x.png" alt="Photoshop">
         <div>
           <h2>Photoshop</h2>
           <p>趣味で写真加工をしている為、画像の加工や補正などの編集が可能です。</p>
         </div>
       </li>
-      <li>
+      <li class="sk">
         <img src="img/responsive.png" alt="responsivedesign">
         <div>
           <h2>Responsive</h2>
           <p>様々なデバイスからアクセスした際に、最適な表示となるようにWebサイトを製作出来ます。</p>
         </div>
       </li>
-      <li>
+      <li class="sk">
         <img src="img/photo-movie.png" alt="camera">
         <div>
           <h2>Photo/Movie</h2>
@@ -128,5 +128,57 @@
     <small>(c) 2022 shibata</small>
   </footer>
   
+  <script>
+    "use strict";
+
+    //SKILLの遅延表示----------------------------------------
+    const lists = document.querySelectorAll("li");
+
+    function callback(entries,obj){
+      entries.forEach(entry=>{
+
+        if(!entry.isIntersecting){
+          return;
+        }
+
+        entry.target.classList.add("appear");
+        obj.unobserve(entry.target);
+      })
+    }
+
+    const option = {
+      threshold : .5,
+    }
+
+    const observer = new IntersectionObserver(callback,option);
+
+    lists.forEach(li=>{
+      observer.observe(li);
+    });
+
+
+    //TOPボタンの遅延表示---------------------------------------
+    const title = document.getElementById("title");
+
+    function callback2(e){
+      console.log(e)
+      if(e.isIntersecting === true){
+        document.getElementById("top").classList.add("appear");
+        console.log("見てるよ！")
+      } else {
+        document.getElementById("top").classList.remove("appear");
+        console.log("見てないよ！")
+      }
+    }
+
+    const option2 = {
+      threshold : 1,
+    }
+
+    const observer2 = new IntersectionObserver(callback2,option2);
+
+    observer2.observe(title);
+
+  </script>
 </body>
 </html>

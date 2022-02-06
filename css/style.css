@@ -44,6 +44,14 @@ li{
   position: fixed;
   right:30px;
   bottom:20px;
+
+}
+#top{
+  opacity: 0;
+  transition: opacity .5s;
+}
+#top.appear{
+  opacity: 1;
 }
 section + section{
   margin-top: 160px;
@@ -124,6 +132,14 @@ nav ul li a{
   margin: 0 30px;
   display: flex;
   align-items: center;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s, transform .5s ;
+}
+.skill li.appear{
+  opacity: 1;
+  transform: translateY(0);
 }
 .skill li + li{
   margin-top: 24px;
