@@ -10,7 +10,9 @@
   <link rel="icon" href="img/pen.png">
 </head>
 <body>
-  <a  id="top" class="top" href="#">TOP</a>
+  <a  id="top" class="top" href="#">
+    <i class="bi bi-arrow-up-square"></i>
+  </a>
   
   <section class="hero">
     <div class="bgi">
@@ -139,16 +141,16 @@
 
         if(!entry.isIntersecting){
           return;
-        }
+        };
 
         entry.target.classList.add("appear");
         obj.unobserve(entry.target);
-      })
-    }
+      });
+    };
 
     const option = {
       threshold : .5,
-    }
+    };
 
     const observer = new IntersectionObserver(callback,option);
 
@@ -161,19 +163,17 @@
     const title = document.getElementById("title");
 
     function callback2(e){
-      console.log(e)
-      if(e.isIntersecting === true){
-        document.getElementById("top").classList.add("appear");
-        console.log("見てるよ！")
+      const top = document.getElementById("top");
+      if(!e[0].isIntersecting){
+        top.classList.add("appear");
       } else {
-        document.getElementById("top").classList.remove("appear");
-        console.log("見てないよ！")
-      }
-    }
+        top.classList.remove("appear");
+      };
+    };
 
     const option2 = {
       threshold : 1,
-    }
+    };
 
     const observer2 = new IntersectionObserver(callback2,option2);
 

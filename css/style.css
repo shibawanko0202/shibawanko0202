@@ -36,11 +36,9 @@ li{
   list-style: none;
 }
 .top{
-  border:1px solid #aaa;
-  border-radius: 5px;
+  font-size: 36px;
   padding: 0 5px;
-  background: #ddd;
-  color: #333;
+  color: rgba(255, 208, 0,0.8);
   position: fixed;
   right:30px;
   bottom:20px;
