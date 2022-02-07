@@ -1,5 +1,7 @@
 /* common */
-
+html{
+  margin: 0;
+}
 body{
   font-family:"OptimaLTPro-Roman","Ryumin Regular KL",serif;
   margin: 0;
@@ -48,20 +50,34 @@ li{
   opacity: 0;
   transition: opacity .5s;
 }
-#top.appear{
+#top.scrolled{
   opacity: 1;
 }
 section + section{
   margin-top: 160px;
 }
+span{
+  position:relative;
+  top:-80px;
+  display: block;
+}
 
 /* header */
 
 header{
+  position:fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 16px;
+  /* padding: 0 16px; */
   align-items: center;
+  transition:background-color .3s, box-shadow .3s;
+  z-index: 1;
+}
+header.scrolled{
+  background-color: rgba(255, 208, 0, 0.7);
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
 header h1{
   font-size: 30px;
@@ -76,6 +92,9 @@ header h1:hover{
 }
 header i{
   font-size: 24px;
+}
+header a{
+  margin: 0 16px;
 }
 
 /* hero */
@@ -97,12 +116,14 @@ header i{
 /* nav */
 
 nav{
-  margin: 230px auto 0;
+  /* margin: 100px auto 0; */
 }
 nav ul{
   /* display: flex; */
   /* justify-content:space-around */
   text-align: center;
+  padding-top: 250px;
+  margin: 0;
 }
 nav ul li + li{
   margin-top: 40px;
@@ -255,14 +276,11 @@ footer small{
   body{
     /* background: blue; */
   }
-  nav{
-    margin: 360px auto 0;
-  }
   nav ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 400px 0;
     margin: 0 60px;
     justify-content:space-around;
   }

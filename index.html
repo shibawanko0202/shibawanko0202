@@ -10,20 +10,21 @@
   <link rel="icon" href="img/pen.png">
 </head>
 <body>
-  <a  id="top" class="top" href="#">
-    <i class="bi bi-arrow-up-square"></i>
-  </a>
+  
+  <div id="target"></div>
+
+  <header>
+    <a href="#">
+      <h1 id="title">shibata.portfolio</h1>
+    </a>
+    <a href="https://www.instagram.com/shibawanko0202/">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </header>
   
   <section class="hero">
     <div class="bgi">
       <div class="rgb">
-        <header>
-          <a href="#">
-            <h1 id="title">shibata.portfolio</h1>
-          </a>
-          <a href="https://www.instagram.com/shibawanko0202/"><i class="bi bi-instagram"></i></a>
-        </header>
-
         <nav>
           <ul>
             <li><a href="#about">ABOUT</a></li>
@@ -35,9 +36,12 @@
       </div>
     </div>
   </section>
-
-  <section id="about" class="about">
-    <h1>ABOUT</h1>
+  
+  <section class="about">
+    <h1>
+      <span id="about"></span>
+      ABOUT
+    </h1>
     <p>1989年生まれ<br>
     長崎県五島列島育ち<br>
     自動車メーカーで半導体製造業務を15年経験し、現在も同社に務めています。<br>
@@ -47,7 +51,10 @@
   </section>
 
   <section class="skill">
-    <h1 id="skill">SKILL</h1>
+    <h1>
+      <span id="skill"></span>
+      SKILL
+    </h1>
     <ul>
       <li class="sk">
         <img src="img/html5-css3.png" alt="HTML">
@@ -91,7 +98,10 @@
   </section>
 
   <section class="work">
-    <h1 id="work">WORKS</h1>
+    <h1>
+      <span id="work"></span>
+      WORKS
+    </h1>
     <ul>
       <li>
         <a href="https://shibawanko0202.github.io/copy_yosioka_riho/">
@@ -121,7 +131,10 @@
   </section>
 
   <section class="contact">
-    <h1 id="contact">CONTACT</h1>
+    <h1>
+      <span id="contact"></span>
+      CONTACT
+    </h1>
     <p>mail : shibawanko0202@gmail.com</p>
     <a href="https://www.instagram.com/shibawanko0202/"><i class="bi bi-instagram"></i></a>
   </section>
@@ -129,6 +142,11 @@
   <footer>
     <small>(c) 2022 shibata</small>
   </footer>
+
+  <a  id="top" class="top" href="#">
+    <i class="bi bi-arrow-up-square"></i>
+  </a>
+
   
   <script>
     "use strict";
@@ -160,24 +178,33 @@
 
 
     //TOPボタンの遅延表示---------------------------------------
-    const title = document.getElementById("title");
-
+    const target = document.getElementById("target");
+    const header = document.querySelector("header");
+    const toTop = document.getElementById("top");
+    
     function callback2(e){
-      const top = document.getElementById("top");
       if(!e[0].isIntersecting){
-        top.classList.add("appear");
+        toTop.classList.add("scrolled");
+        header.classList.add("scrolled");
       } else {
-        top.classList.remove("appear");
+        toTop.classList.remove("scrolled");
+        header.classList.remove("scrolled");
       };
     };
+    
+    const observer2 = new IntersectionObserver(callback2);
 
-    const option2 = {
-      threshold : 1,
-    };
+    toTop.addEventListener("click",e =>{
+      e.preventDefault();
 
-    const observer2 = new IntersectionObserver(callback2,option2);
+      window.scrollTo({
+        top:0,
+        behavior:"smooth",
+      });
+    });
 
-    observer2.observe(title);
+    observer2.observe(target);
+
 
   </script>
 </body>
