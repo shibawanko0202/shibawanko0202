@@ -1,6 +1,6 @@
 /* common */
 html{
-  margin: 0;
+  scroll-behavior: smooth;
 }
 body{
   font-family:"OptimaLTPro-Roman","Ryumin Regular KL",serif;
@@ -76,14 +76,17 @@ header{
   z-index: 1;
 }
 header.scrolled{
-  background-color: rgba(255, 208, 0, 0.7);
+  background-color: rgba(255, 208, 0, 0.5);
   box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
+header .scrolled:hover{
+  color:black
+}
 header h1{
+  color:white;
   font-size: 30px;
   margin: 0;
   padding: 0;
-  color:white;
   font-weight:normal;
   transition: all .3s; 
 }
@@ -115,9 +118,6 @@ header a{
 
 /* nav */
 
-nav{
-  /* margin: 100px auto 0; */
-}
 nav ul{
   /* display: flex; */
   /* justify-content:space-around */
