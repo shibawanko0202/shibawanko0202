@@ -153,6 +153,7 @@ summary{
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  outline: none;
   background-color: rgb(185, 177, 173);
   /* border-radius: 3px; */
   /* border: 2px solid rgba(255, 208, 0,0.8); */
@@ -165,13 +166,26 @@ summary:hover{
 }
 summary::after{
   content: "+";
-  margin-left: 30px;
+  /* margin-left: 30px; */
   color: #fff;
   font-size: 21px;
   transition: transform 1s;
 }
 details[open] summary::after{
   transform: rotate(225deg);
+}
+details[open] .details-content{
+  animation: fadein .5s ease;
+}
+@keyframes fadein{
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
 }
 summary::-webkit-details-marker{
   display: none;
@@ -181,6 +195,7 @@ summary::-webkit-details-marker{
   line-height: 1.6;
 }
 .answer p{
+  padding: 0;
   margin: 0;
 }
 details[open] .answer{
