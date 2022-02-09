@@ -79,9 +79,9 @@ header.scrolled{
   background-color: rgba(255, 208, 0, 0.5);
   box-shadow: 0 0 4px rgba(0,0,0,0.3);
 }
-header .scrolled:hover{
-  color:black
-}
+/* header:hover.scrolled{
+  color:black !important;
+} */
 header h1{
   color:white;
   font-size: 30px;
@@ -105,7 +105,6 @@ header a{
 .bgi{
   background-image: url(../img/DSCF0817.JPG);
   width: 100%;
-  /* max-width: 800px; */
   height: 500px;
   background-size:cover;
   margin: 0 auto;
@@ -119,10 +118,8 @@ header a{
 /* nav */
 
 nav ul{
-  /* display: flex; */
-  /* justify-content:space-around */
   text-align: center;
-  padding-top: 250px;
+  padding-top: 300px;
   margin: 0;
 }
 nav ul li + li{
@@ -140,9 +137,60 @@ nav ul li a{
 .about p{
   text-align: center;
   padding: 0 40px;
-  margin: 24px auto 0;
+  margin: 24px auto 24px;
   max-width: 700px;
 }
+details{
+  margin: 0 auto;
+  max-width: 580px;
+  padding: 0 50px;
+}
+details + details{
+  margin-top: 10px;
+}
+summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(185, 177, 173);
+  /* border-radius: 3px; */
+  /* border: 2px solid rgba(255, 208, 0,0.8); */
+  border: 1px solid #fff;
+  padding: 5px 30px;
+  color: #fff;
+}
+summary:hover{
+  background-color: rgba(255, 208, 0,0.3);
+}
+summary::after{
+  content: "+";
+  margin-left: 30px;
+  color: #fff;
+  font-size: 21px;
+  transition: transform 1s;
+}
+details[open] summary::after{
+  transform: rotate(225deg);
+}
+summary::-webkit-details-marker{
+  display: none;
+}
+.answer{
+  padding: 10px;
+  line-height: 1.6;
+}
+.answer p{
+  margin: 0;
+}
+details[open] .answer{
+  animation: fadein .5s ease;
+}
+@keyframes fadein{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
 
 /* skill */
 
