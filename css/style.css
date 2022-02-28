@@ -1,4 +1,5 @@
 /* common */
+
 html{
   scroll-behavior: smooth;
 }
@@ -160,6 +161,7 @@ summary{
   border: 1px solid #fff;
   padding: 5px 30px;
   color: #fff;
+  transition: all .3s;
 }
 summary:hover{
   background-color: rgba(255, 208, 0,0.3);
@@ -174,19 +176,6 @@ summary::after{
 details[open] summary::after{
   transform: rotate(225deg);
 }
-details[open] .details-content{
-  animation: fadein .5s ease;
-}
-@keyframes fadein{
-  0%{
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100%{
-    opacity: 1;
-    transform: none;
-  }
-}
 summary::-webkit-details-marker{
   display: none;
 }
@@ -199,13 +188,19 @@ summary::-webkit-details-marker{
   margin: 0;
 }
 details[open] .answer{
-  animation: fadein .5s ease;
+  animation: fadein .5s;
+  /* animation-iteration-count: infinite; */
 }
 @keyframes fadein{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
 }
-
 
 /* skill */
 
@@ -214,7 +209,6 @@ details[open] .answer{
   margin: 0 30px;
   display: flex;
   align-items: center;
-  
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .5s, transform .5s ;
@@ -239,29 +233,39 @@ details[open] .answer{
 /* work */
 
 .work ul{
-  padding: 0 50px;
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  justify-content:space-around;
+  flex-wrap: wrap;
 }
-.work ul li h2{
+.work_list h2{
   margin: 0;
 }
-.work ul li a{
+.work_list a{
   color:black;
   display: block;
   text-align: center;
-  border:1px solid black;
+  /* border:1px solid black; */
 }
-.work ul li a:hover{
-  color:rgb(255, 208, 0);
-  border-color:rgb(255, 208, 0);
-}
-.work li{
+.work_list{
+  margin: 0 auto;
+  max-width: 300px;
   padding: 8px;
-}
-.work li + li{
-  margin-top: 16px;
+  margin-top: 40px;
+  text-align: center;
 }
 .work p{
   margin: 0;
+}
+.work_list img{
+  width: 100%;
+  max-width: 300px;
+  transition: all .3s;
+}
+.work_list img:hover{
+  transform: translate(-4px,-6px);
+  box-shadow:8px 12px rgba(255, 208, 0, 0.5);
 }
 
 /* contact */
