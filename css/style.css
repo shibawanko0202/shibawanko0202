@@ -21,7 +21,7 @@ h1{
   font-weight: normal;
 }
 h2{
-  margin: 4px;
+  margin: 8px;
 }
 p{
   margin: 0;
@@ -72,6 +72,7 @@ span{
 header{
   position: fixed;
   top: 0;
+  height: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -87,8 +88,6 @@ header h1{
   color: white;
   font-size: 30px;
   margin: 0 16px;
-  padding: 0;
-  font-weight: normal;
   transition: all .3s; 
 }
 header h1:hover{
@@ -100,10 +99,9 @@ header.scrolled a:hover{
 }
 header a{
   font-size: 24px;
-  margin: 0;
 }
 header a + a{
-  margin: 0 16px 0 4px;
+  margin: 0 16px 0 8px;
 }
 
 /* hero */
@@ -256,11 +254,24 @@ details[open] .answer{
   margin-top: 40px;
   text-align: center;
 }
+.work dl{
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+}
 .work dt{
   font-weight: bold;
-  margin: 8px auto 4px;
+  margin: 4px auto;
+}
+.work dd + dt{
+  padding-top: 12px;
+  border-top: 1px dotted black;
 }
 .work dd{
+  /* border: 1px solid black; */
+  display: table;
+  margin: 8px auto;
+  /* padding: 8px auto; */
   text-align: left;
 }
 .work_list img{
