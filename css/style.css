@@ -11,6 +11,7 @@ body{
   font-family: "OptimaLTPro-Roman","Ryumin Regular KL",serif;
   margin: 0;
   background: rgb(209, 203, 203);
+  line-height: 1.6;
 }
 h1{
   color: black;
@@ -237,46 +238,44 @@ details[open] .answer{
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.work_list{
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 400px;
+  margin: 40px 24px 0;
+  text-align: center;
+  flex: 1;
+}
 .work_list h2{
   font-size: 24px;
   font-weight: bold;
   margin: 8px;
 }
-.work_list a{
-  color: black;
-  display: block;
-  text-align: center;
-}
-.work_list{
-  margin: 0 auto;
-  max-width: 300px;
-  padding: 8px;
-  margin-top: 40px;
-  text-align: center;
-}
 .work dl{
   border: 1px solid black;
   border-radius: 4px;
-  padding: 8px;
+  padding: 20px;
 }
 .work dt{
   font-weight: bold;
   margin: 4px auto;
+}
+.work dt::before,
+.work dt::after{
+  content: '-';
+  padding: 4px;
 }
 .work dd + dt{
   padding-top: 12px;
   border-top: 1px dotted black;
 }
 .work dd{
-  /* border: 1px solid black; */
   display: table;
   margin: 8px auto;
-  /* padding: 8px auto; */
   text-align: left;
 }
 .work_list img{
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   border-radius: 4px;
   transition: all .3s;
 }
