@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>shibata.portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/pen.png">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -137,7 +138,16 @@
           <img src="img/sokudokubunko.jpg" alt="速読アプリ">
         </a>
           <h2>速読強要文庫</h2>
-          <p>人間が文章を読む際にもっとも時間をかけている視線の移動を無くすことで、速読が出来るようにしたwebアプリです。10日</p>
+          <dl>
+            <dt>概要</dt>
+            <dd>人間が文章を読む際にもっとも時間をかけている視線の移動を無くすことで、速読が出来るようにしたwebアプリです。</dd>
+            <dt>工数</dt>
+            <dd>10日</dd>
+            <dt>苦労した点</dt>
+            <dd>文庫本の様な見た目とUIにしたくて、本をめくるようなアニメーションにするのに苦労しました。</dd>
+            <dt>今後の課題</dt>
+            <dd>現在は手入力で文章を配列に変換している為、形態素解析ソフトを使用して自動変換出来るようにしたい。</dd>
+          </dl>
       </li>
       <li class="work_list">
         <a href="https://shibawanko0202.github.io/speedTyping/">
@@ -145,24 +155,51 @@
         </a>
         <div>
           <h2>typing!</h2>
-          <p>タイピング練習ゲームです。
-          html/css/javascriptで頻出する用語を練習でき、リアルタイムでタイピング精度を見ることができます。
-          また、苦手なキーが一目で分かるようjavascriptで動きを付けました。</p>
+          <dl>
+            <dt>概要</dt>
+            <dd>タイピング練習ゲームです。
+              html/css/javascriptで頻出する用語を練習でき、リアルタイムでタイピング精度を見ることができます。
+              また、苦手なキーが一目で分かるようjavascriptで動きを付けました。</dd>
+            <dt>工数</dt>
+            <dd>14日</dd>
+            <dt>苦労した点</dt>
+            <dd>ミスした際のバルーンが問題文に被って出現する問題。中心部分のみ除外する為に画面を4分割してランダムに選び、その中から更にランダムに出現するようにしました。</dd>
+            <dt>今後の課題</dt>
+            <dd>問題(単語)の追加。日本語ver。</dd>
+          </dl>
         </div>
+      </li>
+      <li class="work_list">
+        <a href="https://shibawanko0202.github.io/monkeybord/">
+          <img src="img/monkeybord.jpg" alt="無限の猿実験場">
+        </a>
+          <h2>無限の猿実験場</h2>
+          <dl>
+            <dt>概要</dt>
+            <dd>「無限の時間があれば、猿が無作為にキーボードを叩き続けれるといずれシェイクスピアの戯曲が完成する」という『無限の猿定理』の実証実験用アプリです。数文字の英単語でも滅茶苦茶時間がかかることが分かります。</dd>
+            <dt>工数</dt>
+            <dd>10日</dd>
+            <dt>苦労した点</dt>
+            <dd>打鍵した文字数が2万字程度からsetIntervalの速度が落ちる為、必要以上に時間がかかる。現在は一定数を越えると文字を初期化して速度を維持しています。</dd>
+            <dt>今後の課題</dt>
+            <dd>日本語への対応。</dd>
+          </dl>
       </li>
       <li class="work_list">
         <a href="https://shibawanko0202.github.io/copy_yosioka_riho/">
           <img src="img/yoshiokariho_copy.jpg" alt="吉岡里帆さんのコピーサイト">
         </a>
           <h2>吉岡里帆/コピーサイト</h2>
-          <p>吉岡里帆さんのHPの模写サイトです。</p>
-      </li>
-      <li class="work_list">
-        <a href="">
-          <img src="img/sample.jpg" alt="">
-        </a>
-          <h2>工事中３</h2>
-          <p>工事中です。</p>
+          <dl>
+            <dt>概要</dt>
+            <dd>吉岡里帆さんのHPの模写サイトです。</dd>
+            <dt>工数</dt>
+            <dd>1日</dd>
+            <dt>苦労した点</dt>
+            <dd>可愛すぎる</dd>
+            <dt>今後の課題</dt>
+            <dd>どうやって付き合うか</dd>
+          </dl>
       </li>
     </ul>
   </section>
