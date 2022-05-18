@@ -9,6 +9,25 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/pen.png">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- 基本フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+
+  
+  <!-- セクション名用フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&text=ABOUTSKILWRCN&display=swap" rel="stylesheet">
+
+  <!-- 速読強要文庫 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&text=速読強要文庫&display=swap" rel="stylesheet">
+  
+  <!-- typing! -->
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&text=typing!&display=swap" rel="stylesheet">
+
+  <!-- 無限の猿定理実験場 -->
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&text=無限の猿定理実験場&display=swap" rel="stylesheet">
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVQWQCVVL0"></script>
   <script>
@@ -24,7 +43,9 @@
 
   <header>
     <a href="#">
-      <h1 id="title">shibata.portfolio</h1>
+      <h1 id="title">
+        <img src="img/シバタノポートフォリオ(ロゴタイプ)(滑らか)(白).png" alt="柴田のポートフォリオ" class="shibatanoportfolio">
+      </h1>
     </a>
     <div>
       <a href="https://github.com/shibawanko0202">
@@ -41,10 +62,18 @@
       <div class="rgb">
         <nav>
           <ul>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skill">SKILL</a></li>
-            <li><a href="#work">WORKS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li class="hero__list">
+              <a href="#about">ABOUT</a>
+            </li>
+            <li class="hero__list">
+              <a href="#skill">SKILL</a>
+            </li>
+            <li class="hero__list">
+              <a href="#work">WORKS</a>
+            </li>
+            <li class="hero__list">
+              <a href="#contact">CONTACT</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -53,7 +82,7 @@
   
   <section class="about">
     <h1>
-      <span id="about"></span>
+      <span id="about" class="anchor"></span>
       ABOUT
     </h1>
     <p>1989年生まれ<br>
@@ -82,7 +111,7 @@
 
   <section class="skill">
     <h1>
-      <span id="skill"></span>
+      <span id="skill" class="anchor"></span>
       SKILL
     </h1>
     <ul>
@@ -129,45 +158,99 @@
 
   <section class="work">
     <h1>
-      <span id="work"></span>
+      <span id="work" class="anchor"></span>
       WORKS
     </h1>
     <ul>
       <li class="work_list">
-        <a href="https://shibawanko0202.github.io/sokudokubunko/">
-          <img src="img/sokudokubunko.jpg" alt="速読アプリ">
+        <a href="https://shibawanko0202.github.io/monte/">
+          <img src="img/もんてくらい(スクショ)950.jpg" alt="" class="works__list-img">
         </a>
-          <h2>速読強要文庫</h2>
+          <h2 class="monte">
+            住宅型有料老人ホーム<br>
+            <img src="img/もんてくらい(ロゴタイプ)(圧縮済).webp" alt="もんてくらい" class="monte-img">
+          </h2>
           <dl>
             <dt>概要</dt>
-            <dd>人間が文章を読む際にもっとも時間をかけている視線の移動を無くすことで、速読が出来るようにしたwebアプリです。</dd>
+            <dd>知人が経営する老人ホームのwebサイトです。</dd>
+            <dt>工数</dt>
+            <dd>25日</dd>
+            <dt>担当範囲</dt>
+            <dd>
+              <ul>
+                <li>サイトデザイン</li>
+                <li>使用写真の選定</li>
+                <li>画像の加工</li>
+                <li>文章の加筆修正</li>
+                <li>コーディング</li>
+              </ul>
+            </dd>
+            <dt>こだわりポイント</dt>
+            <dd>
+              サイトを閲覧する年齢層(老人ホームの利用者層とその家族)を考え、できるだけ分かりやすく、スクロールだけで完結するデザインにしました。
+            </dd>
+            <dt>苦労した点とその対策</dt>
+            <dd>
+              使用する画像が決まっておらず、良い写真が撮れたら変更したい。<br>
+              という事だったので、現状持っている画像(200枚以上)を送ってもらいそこから使用する画像を選定し、レタッチ(露出の調整、歪曲収差の補正、不要なものの削除等)してから配置しています。
+            </dd>
+            <dt>今後の課題</dt>
+            <dd>
+              いずれはブログやお知らせも追加したいとのことなので、CMSの導入。
+            </dd>
+          </dl>
+      </li>
+      <li class="work_list">
+        <a href="https://shibawanko0202.github.io/sokudokubunko/">
+          <img src="img/sokudokubunko.jpg" alt="" class="works__list-img">
+        </a>
+          <h2 class="sokudoku">速読強要文庫</h2>
+          <dl>
+            <dt>概要</dt>
+            <dd>
+              人間が文章を読む際にもっとも時間をかけている視線の移動を無くすことで、速読が出来るようにしたwebアプリです。
+            </dd>
             <dt>工数</dt>
             <dd>10日</dd>
             <dt>こだわりポイント</dt>
-            <dd>文庫本(古本)のような見た目とアニメーション、難しい言葉が多いのでホバーで意味や読みを表示できるようにしました。</dd>
+            <dd>
+              文庫本(古本)のような見た目とアニメーション、難しい言葉が多いのでホバーで意味や読みを表示できるようにしました。
+            </dd>
             <dt>苦労した点とその対策</dt>
-            <dd>青空文庫(著作権の消滅した作品を載せているwebサイト)から作品を選ぶのに悩みました。本当は冒頭が有名な「雪国」も掲載したかったのですが、ギリギリ著作権が残っていました。残念。</dd>
+            <dd>
+              青空文庫(著作権の消滅した作品を載せているwebサイト)から作品を選ぶのに悩みました。<br>
+              本当は冒頭が有名な「雪国」も掲載したかったのですが、ギリギリ著作権が残っていました。残念。
+            </dd>
             <dt>今後の課題</dt>
-            <dd>現在は手入力で文章を配列に変換している為、形態素解析ソフト(kuromoji.jsなど)を使用して自動変換出来るようにしたいと考えています。</dd>
+            <dd>
+              現在は手入力で文章を配列に変換しており非常に手間がかかる為、形態素解析ソフト(kuromoji.jsなど)を使用して自動変換出来るようにしたいと考えています。
+            </dd>
           </dl>
       </li>
       <li class="work_list">
         <a href="https://shibawanko0202.github.io/speedTyping/">
-          <img src="img/typing!(speed).jpg" alt="タイピングソフト">
+          <img src="img/typing!(speed).jpg" alt="" class="works__list-img">
         </a>
         <div>
-          <h2>typing!</h2>
+          <h2 class="typing">typing!</h2>
           <dl>
             <dt>概要</dt>
-            <dd>タイピング練習ゲームです。
-              html/css/javascriptで頻出する用語を練習でき、リアルタイムでタイピング精度を見ることができます。
-              また、苦手なキーが一目で分かるようjavascriptで動きを付けました。</dd>
+            <dd>タイピングゲームです。<br>
+              html/css/javascriptで頻出する用語を練習でき、リアルタイムでタイピング精度を見ることができます。<br>
+              また、苦手なキーが一目で分かるようjavascriptで動きを付けました。
+            </dd>
             <dt>工数</dt>
             <dd>14日</dd>
             <dt>こだわりポイント</dt>
-            <dd>気持のいいUIを目指してアニメーションを実装しました。ミスした際に現れるバルーンはクリックで割ることもできます。</dd>
+            <dd>
+              気持のいいUIを目指してアニメーションを実装しました。<br>
+              ミスした際に現れるバルーンはクリックで割ることもできます。
+            </dd>
             <dt>苦労した点とその対策</dt>
-            <dd>ミスしたキーのバルーンの出現がランダムな為、問題文に被って出現する事もありました。その対策として中心部分のみ除外する為に画面を4分割してランダムに選び、その中から更にランダムに出現するようにしました。</dd>
+            <dd>
+              ミスしたキーのバルーンの出現がランダムな為、問題文に被って出現する事もありました。<br>
+              その対策として中心部分のみ除外する為に画面を4分割してランダムに選び、その中から更にランダムに出現するようにしました。
+            </dd>
             <dt>今後の課題</dt>
             <dd>問題(単語)の追加。日本語ver。</dd>
           </dl>
@@ -175,27 +258,33 @@
       </li>
       <li class="work_list">
         <a href="https://shibawanko0202.github.io/monkeybord/">
-          <img src="img/monkeybord.jpg" alt="無限の猿実験場">
+          <img src="img/monkeybord.jpg" alt="" class="works__list-img">
         </a>
-          <h2>無限の猿実験場</h2>
+          <h2 class="monkeybord">無限<span>の</span>猿定理実験場</h2>
           <dl>
             <dt>概要</dt>
-            <dd>「無限の時間があれば、猿が無作為にキーボードを叩き続けれるといずれシェイクスピアの戯曲が完成する」という『無限の猿定理』の実証実験用アプリです。数文字の英単語でも滅茶苦茶時間がかかることが分かります。
+            <dd>
+              「無限の時間があれば、猿が無作為にキーボードを叩き続けれるといずれシェイクスピアの戯曲が完成する」という『無限の猿定理』の実証実験用アプリです。<br>
+              数文字の英単語でも滅茶苦茶時間がかかることが分かります。<br>
               「apple」は(幸運にも)6時間程度で完成しました。
             </dd>
             <dt>工数</dt>
             <dd>10日</dd>
             <dt>こだわりポイント</dt>
-            <dd>機能としてはシンプルなものなので、今回はメディアクエリを使わないでレスポンシブ対応してみました。</dd>
+            <dd>
+              機能としてはシンプルなものなので、今回はメディアクエリを使わないでレスポンシブ対応してみました。
+            </dd>
             <dt>苦労した点とその対策</dt>
-            <dd>打鍵した文字数が2万字程度からsetIntervalの速度が落ちる為、必要以上に時間がかかるので、現在は一定数を越えると文字を初期化して速度を維持しています。</dd>
+            <dd>
+              打鍵した文字数が2万字程度からsetIntervalの速度が落ちる為、必要以上に時間がかかるので、現在は一定数を越えると文字を初期化して速度を維持しています。
+            </dd>
             <dt>今後の課題</dt>
             <dd>日本語への対応。</dd>
           </dl>
       </li>
       <li class="work_list">
         <a href="https://shibawanko0202.github.io/copy_yosioka_riho/">
-          <img src="img/yoshiokariho_copy.jpg" alt="吉岡里帆さんのコピーサイト">
+          <img src="img/yoshiokariho_copy.jpg" alt="" class="works__list-img">
         </a>
           <h2>吉岡里帆/コピーサイト</h2>
           <dl>
@@ -216,7 +305,7 @@
 
   <section class="contact">
     <h1>
-      <span id="contact"></span>
+      <span id="contact" class="anchor"></span>
       CONTACT
     </h1>
     <p>mail : shibawanko0202@gmail.com</p>
