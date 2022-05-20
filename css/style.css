@@ -9,6 +9,7 @@ html{
 }
 body{
   /* font-family: "OptimaLTPro-Roman","Ryumin Regular KL",serif; */
+  position: relative;
   margin: 0;
   background: rgb(209, 203, 203);
   line-height: 1.6;
@@ -95,6 +96,7 @@ section + section{
 .top__img{
   width: 70px;
   object-fit: contain;
+  backface-visibility: hidden;
   filter: drop-shadow(0 0 3px rgba(0,0,0,5));
 }
 .top{
@@ -106,6 +108,31 @@ section + section{
 }
 
 /* ↑TOPへ戻るボタン↑ */
+
+/* ↓枠線↓ */
+
+.top-right{
+  position: fixed;
+  top: 11px;
+  right: 11px;
+  width: calc(100% - 330px - 16px);
+  height: 100%;
+  border-top: 1.5px solid rgba(255,255,255,.5);
+  border-right: 1px solid rgba(255,255,255,.5);
+}
+.bottom-left{
+  position: fixed;
+  top: 150px;
+  left: 11px;
+  width: 100px;
+  width: calc(100vw - 22px);
+  height: calc(100vh - 150px - 11px);
+  /* border: 1px solid rgba(255,255,255,.5); */
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  border-left: 1px solid rgba(255,255,255,.5);
+}
+
+/* ↑枠線↑ */
 
 
 /* header */
@@ -119,23 +146,19 @@ header{
   justify-content: space-between;
   align-items: center;
   transition:background-color .3s, box-shadow .3s;
-  z-index: 1;
-}
-header.scrolled{
-  /* background-color: rgba(255, 208, 0, 0.5);
-  box-shadow: 0 0 4px rgba(0,0,0,0.3); */
+  z-index: 3;
 }
 .header__title-img{
   position: absolute;
   top: 0;
   left: 0;
-  /* width: 30vw; */
-  max-width: 400px;
+  width: calc(100% - 16px);
+  max-width: 330px;
   object-fit: contain;
   margin: 8px;
   backface-visibility: hidden;
   filter: drop-shadow(0 0 3px rgba(0,0,0,5));
-  /* filter: drop-shadow(1px 1px rgba(0,0,0,.3)); */
+  pointer-events: none;
   transition: opacity .3s;
 }
 /* .header__title-img--not-hover{
@@ -148,12 +171,18 @@ header.scrolled .header__title-img--not-hover:hover
 + .header__title-img--hover{
   opacity: 0;
 } */
+.header__nav{
+  position: absolute;
+  top: 60px;
+  right: 8px;
+}
 .header__nav-icon{
   font-size: 24px;
   color: white;
-  transition: all .3s;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,5));
   text-decoration: none;
   font-weight: normal;
+  transition: all .3s;
 }
 .header__nav-icon:hover{
   color: var(--himawari);
@@ -168,75 +197,77 @@ header.scrolled .header__title-img--not-hover:hover
 
 /* hero */
 
-.bgi{
+.hero__himawari{
   width: 100%;
   height: 500px;
   background-image: url(../img/ひまわり畑.JPG);
   background-size: cover;
   margin: 0 auto;
 }
-.rgb{
+.hero__gradient{
   width: 100%;
   height: 501px;
   background: linear-gradient(rgba(0,0,0,0.4) 8%,rgba(0,0,0,0) 20%,rgba(209, 203, 203,1) 100%);
 }
-
-.hero__list {
-  position: relative;
-  width: 150px;
-  max-width: 800px;
-  margin: 16px auto;
-  padding: 1em 2em;
-  color: #fff;
-}
-.hero__list::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  background:
-    radial-gradient(circle at top left, transparent 20px, #fff 20px, #fff 22px, transparent 22px) left top / 22px 22px no-repeat,
-    radial-gradient(circle at top right, transparent 20px, #fff 20px, #fff 22px, transparent 22px) right top / 22px 22px no-repeat,
-    radial-gradient(circle at bottom left, transparent 20px, #fff 20px, #fff 22px, transparent 22px) left bottom / 22px 22px no-repeat,
-    radial-gradient(circle at bottom right, transparent 20px, #fff 20px, #fff 22px, transparent 22px) right bottom / 22px 22px no-repeat,
-    linear-gradient(90deg, transparent 20px, #fff 22px) left top / 51% 2px no-repeat,
-    linear-gradient(-90deg, transparent 20px, #fff 22px) right top / 51% 2px no-repeat,
-    linear-gradient(90deg, transparent 20px, #fff 22px) left bottom / 51% 2px no-repeat,
-    linear-gradient(-90deg, transparent 20px, #fff 22px) right bottom / 51% 2px no-repeat,
-    linear-gradient(180deg, transparent 20px, #fff 22px) left top / 2px 51% no-repeat,
-    linear-gradient(0deg, transparent 20px, #fff 22px) left bottom / 2px 51% no-repeat,
-    linear-gradient(180deg, transparent 20px, #fff 22px) right top / 2px 51% no-repeat,
-    linear-gradient(0deg, transparent 20px, #fff 22px) right bottom / 2px 51% no-repeat;
-}
-.hero__list::after {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  left: 10px;
-  content: "";
-  box-shadow: 0 0 0 1px #fff;
-}
-
-/* nav */
-
-nav ul{
-  text-align: center;
-  padding-top: 260px;
-  margin: 0;
+.hero__lists{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 230px;
+  margin: 0 auto;
   font-family: 'Sansita Swashed', cursive;
 }
-nav ul li + li{
-  margin-top: 40px;
+.hero__list{
+  width: 110px;
+  height: 60px;
+  margin: 20px;
+  /* outline: 1px solid pink; */
 }
-nav ul li a{
-  /* color: black;
-  border: 1px solid black;
-  font-size: 24px;
-  padding: 16px 16px; */
+.hero__list a{
+  position: relative;
 }
+.hero__list-frame{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 110px;
+  object-fit: contain;
+  backface-visibility: hidden;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,5));
+  z-index: 2;
+}
+.hero__list-frame-hover{
+  opacity: 0;
+  filter: none;
+  z-index: 1;
+  transition: opacity .3s;
+}
+.hero__list-frame:hover + .hero__list-frame-hover{
+  opacity: 1;
+}
+.hero__list div{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 3px rgba(0,0,0,5);
+}
+.hero__list:nth-child(1) div{
+  top: -6px;
+  left: 23px;
+}
+.hero__list:nth-child(2) div{
+  top: -6px;
+  left: 29px;
+}
+.hero__list:nth-child(3) div{
+  top: -6px;
+  left: 22px;
+}
+.hero__list:nth-child(4) div{
+  top: -6px;
+  left: 14px;
+}
+
 
 /* about */
 
@@ -413,14 +444,24 @@ footer small{
   font-family: 'Sansita Swashed', cursive;
 }
 
+/* midium-small */
+
+@media (min-width:450px){
+  .header__nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 /* midium */
 
 @media (min-width:550px){
   nav ul{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     margin: 0 60px;
-    justify-content: space-around
+    justify-content: space-around */
   }
   nav ul li{
     width: 40%;
