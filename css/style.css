@@ -116,20 +116,20 @@ section + section{
   top: 11px;
   right: 11px;
   width: calc(100% - 330px - 16px);
-  height: 100%;
-  border-top: 1.5px solid rgba(255,255,255,.5);
-  border-right: 1px solid rgba(255,255,255,.5);
+  height: calc(100vh - 22px);
+  border-top: 1.5px solid rgba(255,255,255,.9);
+  border-right: 1px solid rgba(255,255,255,.9);
 }
 .bottom-left{
   position: fixed;
   top: 150px;
   left: 11px;
   width: 100px;
-  width: calc(100vw - 22px);
+  width: calc(100% - 22px);
   height: calc(100vh - 150px - 11px);
-  /* border: 1px solid rgba(255,255,255,.5); */
-  border-bottom: 1px solid rgba(255,255,255,.5);
-  border-left: 1px solid rgba(255,255,255,.5);
+  /* border: 1px solid rgba(255,255,255,.9); */
+  border-bottom: 1px solid rgba(255,255,255,.9);
+  border-left: 1px solid rgba(255,255,255,.9);
 }
 
 /* ↑枠線↑ */
@@ -464,8 +464,8 @@ footer small{
     justify-content: space-around */
   }
   nav ul li{
-    width: 40%;
-    margin: 40px 0 ;
+    /* width: 40%;
+    margin: 40px 0 ; */
   }
   .skill ul{
     display: flex;
