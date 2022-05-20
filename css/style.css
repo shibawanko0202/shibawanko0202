@@ -457,15 +457,10 @@ footer small{
 /* midium */
 
 @media (min-width:550px){
-  nav ul{
-    /* display: flex;
-    flex-wrap: wrap;
-    margin: 0 60px;
-    justify-content: space-around */
-  }
+
   nav ul li{
-    /* width: 40%;
-    margin: 40px 0 ; */
+    width: 40%;
+    /* margin: 40px 0 ; */
   }
   .skill ul{
     display: flex;
