@@ -9,22 +9,18 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/pen.png">
+
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- 基本フォント -->
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
-
-  
-  <!-- セクション名用フォント -->
-  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&text=ABOUTSKILWRCN&display=swap" rel="stylesheet">
-
+  <!-- セクション名とフッター用フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&text=ABOUTSKILWRCN(c)20shibat&display=swap" rel="stylesheet">
   <!-- 速読強要文庫 -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&text=速読強要文庫&display=swap" rel="stylesheet">
-  
   <!-- typing! -->
   <link href="https://fonts.googleapis.com/css2?family=Monofett&text=typing!&display=swap" rel="stylesheet">
-
   <!-- 無限の猿定理実験場 -->
   <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&text=無限の猿定理実験場&display=swap" rel="stylesheet">
 
@@ -43,15 +39,15 @@
 
   <header>
     <a href="#">
-      <h1 id="title">
-        <img src="img/シバタノポートフォリオ(ロゴタイプ)(滑らか)(白).png" alt="柴田のポートフォリオ" class="shibatanoportfolio">
+      <h1 id="header__title">
+        <img src="img/シバタノポートフォリオ(art-deco)(白).png" alt="柴田のポートフォリオ" class="header__title-img header__title-img--scroll-hover">
       </h1>
     </a>
-    <div>
-      <a href="https://github.com/shibawanko0202">
+    <div class="header__nav">
+      <a href="https://github.com/shibawanko0202" class="header__nav-icon">
         <i class="bi bi-github"></i>
       </a>
-      <a href="https://www.instagram.com/shibawanko0202/">
+      <a href="https://www.instagram.com/shibawanko0202/" class="header__nav-icon">
         <i class="bi bi-instagram"></i>
       </a>
     </div>
@@ -85,13 +81,23 @@
       <span id="about" class="anchor"></span>
       ABOUT
     </h1>
-    <p>1989年生まれ<br>
-    長崎県五島列島出身<br>
-    自動車メーカーで半導体製造業務を15年経験し、現在も同社に務めています。
-    その傍らで、業務で出来ない経験をするためにボランティア活動等(ゴミ拾い、イベント運営、水族館の解説、友人の結婚式二次会幹事など)を行っていました。<br>
-    現在はweb製作に携わりたいと考え独学で勉強、転職活動中です。<br>
-    趣味 : 読書/映画観賞/カメラ<br>
-    愛知県名古屋市在住</p>
+    <p>
+      1989年生まれ
+    </p>
+    <p>
+      長崎県五島列島出身
+    </p>
+    <p>
+      自動車メーカーで半導体製造業務を15年経験し、現在も同社に務めています。<br>
+      その傍らで、業務で出来ない経験をするためにボランティア活動等(ゴミ拾い、イベント運営、水族館の解説、友人の結婚式二次会幹事など)を行っていました。<br>
+      現在はweb製作に携わりたいと考え独学で勉強、転職活動中です。<br>
+    </p>
+    <p>
+      愛知県名古屋市在住
+    </p>
+    <p>
+      趣味 : 読書/映画観賞/カメラ
+    </p>
     <details>
       <summary>なぜ、今さら転職したいのですか</summary>
       <div class="answer">
@@ -187,12 +193,11 @@
             </dd>
             <dt>こだわりポイント</dt>
             <dd>
-              サイトを閲覧する年齢層(老人ホームの利用者層とその家族)を考え、できるだけ分かりやすく、スクロールだけで完結するデザインにしました。
+              サイトを閲覧する年齢層(老人ホームの利用者層とその家族)を考え、できるだけ分かりやすくスクロールだけで完結するデザインにしました。
             </dd>
             <dt>苦労した点とその対策</dt>
             <dd>
-              使用する画像が決まっておらず、良い写真が撮れたら変更したい。<br>
-              という事だったので、現状持っている画像(200枚以上)を送ってもらいそこから使用する画像を選定し、レタッチ(露出の調整、歪曲収差の補正、不要なものの削除等)してから配置しています。
+              「使用する画像が決まっておらず、良い写真が撮れたら変更したい」という事だったので、現状持っている画像(200枚以上)を送ってもらいそこから使用する画像を選定し、レタッチ(露出の調整、歪曲収差の補正、不要なものの削除等)してから使用しています。
             </dd>
             <dt>今後の課題</dt>
             <dd>
@@ -214,12 +219,13 @@
             <dd>10日</dd>
             <dt>こだわりポイント</dt>
             <dd>
-              文庫本(古本)のような見た目とアニメーション、難しい言葉が多いのでホバーで意味や読みを表示できるようにしました。
+              文庫本(古本)のような見た目とアニメーション。<br>
+              難しい言葉が多いのでホバーで意味や読みを表示できるようにしました。
             </dd>
             <dt>苦労した点とその対策</dt>
             <dd>
-              青空文庫(著作権の消滅した作品を載せているwebサイト)から作品を選ぶのに悩みました。<br>
-              本当は冒頭が有名な「雪国」も掲載したかったのですが、ギリギリ著作権が残っていました。残念。
+              青空文庫(著作権の消滅した文学作品を載せているwebサイト)から作品を選ぶのに悩みました。<br>
+              本当は冒頭が有名な「雪国」も掲載したかったのですが、著者が比較的長寿だった為ギリギリ著作権が残っていました。
             </dd>
             <dt>今後の課題</dt>
             <dd>
@@ -276,10 +282,10 @@
             </dd>
             <dt>苦労した点とその対策</dt>
             <dd>
-              打鍵した文字数が2万字程度からsetIntervalの速度が落ちる為、必要以上に時間がかかるので、現在は一定数を越えると文字を初期化して速度を維持しています。
+              打鍵した文字を保持し続けると2万字程度からsetIntervalの速度が落ちる為必要以上に時間がかかるので、現在は一定数を越えると文字を破棄して速度を維持しています。
             </dd>
             <dt>今後の課題</dt>
-            <dd>日本語への対応。</dd>
+            <dd>日本語への対応をしたいですが、実装しても現実的でない程打鍵に時間がかかるので保留。</dd>
           </dl>
       </li>
       <li class="work_list">
@@ -318,11 +324,11 @@
   </section>
 
   <footer>
-    <small>&copy; 2022 shibata</small>
+    <small>(c) 2022 shibata</small>
   </footer>
 
   <a  id="top" class="top" href="#">
-    <i class="bi bi-arrow-up-square"></i>
+    <img src="img/TOPボタン(白).png" alt="TOPへ戻る" class="top__img">
   </a>
 
   
