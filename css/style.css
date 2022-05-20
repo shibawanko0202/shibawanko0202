@@ -153,7 +153,7 @@ header{
   top: 0;
   left: 0;
   width: calc(100% - 16px);
-  max-width: 330px;
+  max-width: 400px;
   object-fit: contain;
   margin: 8px;
   backface-visibility: hidden;
@@ -173,8 +173,9 @@ header.scrolled .header__title-img--not-hover:hover
 } */
 .header__nav{
   position: absolute;
-  top: 60px;
-  right: 8px;
+  top: 65px;
+  right: 12%;
+  margin: 16px;
 }
 .header__nav-icon{
   font-size: 24px;
@@ -192,7 +193,7 @@ header.scrolled .header__title-img--not-hover:hover
   color: #222;
 }
 .header__nav-icon + a{
-  margin: 0 16px 0 8px;
+  margin: 0 8px;
 }
 
 /* hero */
@@ -212,7 +213,7 @@ header.scrolled .header__title-img--not-hover:hover
 .hero__lists{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 230px;
   margin: 0 auto;
   font-family: 'Sansita Swashed', cursive;
@@ -446,11 +447,14 @@ footer small{
 
 /* midium-small */
 
-@media (min-width:450px){
+@media (min-width:530px){
   .header__nav{
     position: absolute;
     top: 0;
     right: 0;
+  }
+  .header__nav-icon + a{
+    margin: 0 16px 0 8px;
   }
 }
 
