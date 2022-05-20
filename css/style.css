@@ -200,7 +200,7 @@ header.scrolled .header__title-img--not-hover:hover
 .hero__himawari{
   width: 100%;
   height: 500px;
-  background-image: url(../img/ひまわりはたけ.JPG);
+  background-image: url(../img/himawari.jpg);
   background-size: cover;
   margin: 0 auto;
 }
