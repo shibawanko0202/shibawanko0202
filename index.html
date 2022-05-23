@@ -43,7 +43,7 @@
   <header>
     <a href="#">
       <h1 id="header__title">
-        <img src="img/シバタノポートフォリオ(art-deco)(白).png" alt="柴田のポートフォリオ" class="header__title-img header__title-img--scroll-hover">
+        <img src="img/シバタノポートフォリオ(art-deco).png" alt="柴田のポートフォリオ" class="header__title-img header__title-img--scroll-hover">
       </h1>
     </a>
     <div class="header__nav">
@@ -351,67 +351,9 @@
 
   <a  id="top" class="top" href="#">
     <img src="img/TOPボタン(白).png" alt="TOPへ戻る" class="top__img">
+    <img src="img/TOPボタン(ホバー).png" alt="" class="top__img top__img-hover">
   </a>
 
-  
-  <script>
-    "use strict";
-
-    //SKILLの遅延表示----------------------------------------
-    const lists = document.querySelectorAll("li");
-
-    function callback(entries,obj){
-      entries.forEach(entry=>{
-
-        if(!entry.isIntersecting){
-          return;
-        };
-
-        entry.target.classList.add("appear");
-        obj.unobserve(entry.target);
-      });
-    };
-
-    const option = {
-      threshold : .5,
-    };
-
-    const observer = new IntersectionObserver(callback,option);
-
-    lists.forEach(li=>{
-      observer.observe(li);
-    });
-
-
-    //TOPボタンの遅延表示---------------------------------------
-    const target = document.getElementById("target");
-    const header = document.querySelector("header");
-    const toTop = document.getElementById("top");
-    
-    function callback2(e){
-      if(!e[0].isIntersecting){
-        toTop.classList.add("scrolled");
-        header.classList.add("scrolled");
-      } else {
-        toTop.classList.remove("scrolled");
-        header.classList.remove("scrolled");
-      };
-    };
-    
-    const observer2 = new IntersectionObserver(callback2);
-
-    toTop.addEventListener("click",e =>{
-      e.preventDefault();
-
-      window.scrollTo({
-        top:0,
-        behavior:"smooth",
-      });
-    });
-
-    observer2.observe(target);
-
-
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
