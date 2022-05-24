@@ -9,6 +9,8 @@ html{
 }
 body{
   /* font-family: "OptimaLTPro-Roman","Ryumin Regular KL",serif; */
+  width: 100%;
+  overflow-x: hidden;
   position: relative;
   margin: 0;
   background: rgb(209, 203, 203);
@@ -110,10 +112,12 @@ img{
   opacity: 1;
 }
 .top{
+  pointer-events: none;
   opacity: 0;
   transition: opacity .5s;
 }
-.top.scrolled{
+.top.show{
+  pointer-events: all;
   opacity: 1;
 }
 
@@ -128,20 +132,25 @@ img{
   width: calc(100% - 400px - 16px);
   height: calc(100vh - 22px);
   border-top: 1.5px solid rgba(255,255,255,.9);
-  border-right: 1px solid rgba(255,255,255,.9);
+  border-right: 1.5px solid rgba(255,255,255,.9);
   pointer-events: none;
+
+  /* border-color: rgb(193, 164, 64); */
+  /* border-color: rgb(19, 59, 8); */
 }
 .bottom-left{
   position: fixed;
-  top: 150px;
+  top: 180px;
   left: 11px;
   width: 100px;
   width: calc(100% - 22px);
-  height: calc(100vh - 150px - 11px);
-  /* border: 1px solid rgba(255,255,255,.9); */
-  border-bottom: 1px solid rgba(255,255,255,.9);
-  border-left: 1px solid rgba(255,255,255,.9);
+  height: calc(100vh - 180px - 11px);
+  border-bottom: 1.5px solid rgba(255,255,255,.9);
+  border-left: 1.5px solid rgba(255,255,255,.9);
   pointer-events: none;
+  
+  /* border-color: rgb(193, 164, 64);
+  border-color: rgb(19, 59, 8); */
 }
 
 /* ↑枠線↑ */
@@ -168,6 +177,7 @@ header{
   max-width: 400px;
   object-fit: contain;
   margin: 8px;
+  /* filter: drop-shadow(0 0 3px rgba(255,255,255,5)); */
   filter: drop-shadow(0 0 3px rgba(0,0,0,5));
   pointer-events: none;
   transition: opacity .3s;
@@ -190,6 +200,8 @@ header.scrolled .header__title-img--not-hover:hover
 .header__nav-icon{
   font-size: 24px;
   /* line-height: 60px; */
+  /* color: rgb(193, 164, 64);
+  color: rgb(19, 59, 8); */
   color: white;
   filter: drop-shadow(0 0 3px rgba(0,0,0,5));
   text-decoration: none;
@@ -227,21 +239,22 @@ header.scrolled .header__title-img--not-hover:hover
 
 .hero__himawari{
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-image: url(../img/himawari.jpg);
   background-size: cover;
+  background-position: 50% 20%;
   margin: 0 auto;
 }
 .hero__gradient{
   width: 100%;
-  height: 501px;
-  background: linear-gradient(rgba(0,0,0,0.4) 8%,rgba(0,0,0,0) 20%,rgba(209, 203, 203,1) 100%);
+  height: 601px;
+  background: linear-gradient(rgba(0,0,0,0.4) 8%,rgba(0,0,0,0) 40%,rgba(209, 203, 203,1) 100%);
 }
 .hero__lists{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 230px;
+  padding-top: 270px;
   margin: 0 auto;
   font-family: 'Sansita Swashed', cursive;
 }
@@ -281,8 +294,10 @@ header.scrolled .header__title-img--not-hover:hover
 .hero__list div{
   position: absolute;
   color: #fff;
+  /* color: rgb(193, 164, 64);
+  color: rgb(19, 59, 8); */
   font-size: 20px;
-  text-shadow: 0 0 3px rgba(0,0,0,5);
+  text-shadow: 0 0 3px rgba(0,0,0,.4);
 }
 .hero__list:nth-child(1) div{
   top: -6px;
