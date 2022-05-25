@@ -20,7 +20,7 @@
     };
   };
 
-  setInterval(load_anime,500);
+  setInterval(load_anime,300);
 
 // ↑↑ loadingアニメーション ↑↑ ---------------
 
@@ -34,7 +34,7 @@
   };
 
   window.addEventListener("load",loaded);
-  // setTimeout(loaded,2000);
+  setTimeout(loaded,5000);
 
 // ↑↑ loading画面の終了 ↑↑ ---------------
 
@@ -44,13 +44,19 @@
 
   const target = document.getElementById("target");
   const to_top = document.getElementById("to_top");
+  const border_tr = document.getElementById("border_tr");
+  const border_bl = document.getElementById("border_bl");
 
   // 位置を確認してクラスを制御
   function top_button(){
     if(target.getBoundingClientRect().y < -100){
       to_top.classList.add("show");
+      border_tr.classList.add("short");
+      border_bl.classList.add("short");
     } else {
       to_top.classList.remove("show");
+      border_tr.classList.remove("short");
+      border_bl.classList.remove("short");
     };
   };
 
