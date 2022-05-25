@@ -8,14 +8,10 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  /* font-family: "OptimaLTPro-Roman","Ryumin Regular KL",serif; */
   width: 100%;
-  /* overflow-x: hidden; */
   position: relative;
   margin: 0;
   background: rgb(209, 203, 203);
-  /* background: rgb(91, 104, 114); */
-  /* line-height: 1.6; */
   font-family: 'Zen Kurenaido', sans-serif;
 }
 h1{
@@ -119,7 +115,7 @@ img{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #999;
+    background-color: #ddd;
     opacity: .95;
     z-index: 999;
     transition: opacity 1s;
@@ -158,7 +154,7 @@ img{
 
   .top{
     position: fixed;
-    right: 5px;
+    right: 6px;
     bottom: 10px;
   }
   .top__img{
@@ -199,28 +195,68 @@ img{
     top: calc((100vw / 10) + 11px);
     right: 11px;
     width: calc(100% - 400px - 16px);
-    height: calc(100% - (100vw / 10) - 22px);
-    border-right: 1.5px solid rgba(255,255,255,.9);
+    height: calc(100% - (100vw / 10) - 86.5px);
+    /* height: calc(100% - (100vw / 10) - 22px); */
+    border-right: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
-    transition: height 1.2s;
+    /* transition: height 1.2s; */
+    animation: right-long .5s forwards;
   }
   .border__top-right.short{
-    height: calc(100% - (100vw / 10) - 92px);
+    height: calc(100% - (100vw / 10) - 22px);
+    /* height: calc(100% - (100vw / 10) - 86.5px); */
+    animation: right-short .8s forwards .23s;
+  }
+  @keyframes right-short{
+    0%{
+      height: calc(100% - (100vw / 10) - 22px);
+    }
+    100%{
+      height: calc(100% - (100vw / 10) - 86.5px);
+    }
+  }
+  @keyframes right-long{
+    0%{
+      height: calc(100% - (100vw / 10) - 86.5px);
+    }
+    100%{
+      height: calc(100% - (100vw / 10) - 22px);
+    }
   }
   .border__bottom-left{
     position: fixed;
     top: calc(100vw / 2.3);
     left: 11px;
     width: 100px;
-    width: calc(100% - 22px);
+    /* width: calc(100% - 22px); */
+    width: calc(100% - 86px);
     height: calc(100% - (100vw / 2.3) - 11px);
-    border-bottom: 1.5px solid rgba(255,255,255,.9);
-    border-left: 1.5px solid rgba(255,255,255,.9);
+    border-bottom: 1.4px solid rgba(255,255,255,.9);
+    border-left: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
-    transition: width 1.2s;
+    /* transition: width 0s ; */
+    animation: bottom-long .5s ease-in-out forwards;
   }
   .border__bottom-left.short{
-    width: calc(100% - 92px);
+    width: calc(100% - 22px);
+    /* width: calc(100% - 86px); */
+    animation: bottom-short .8s forwards .23s;
+  }
+  @keyframes bottom-short{
+    0%{
+      width: calc(100% - 22px);
+    }
+    100%{
+      width: calc(100% - 86px);
+    }
+  }
+  @keyframes bottom-long{
+    0%{
+      width: calc(100% - 86px);
+    }
+    100%{
+      width: calc(100% - 22px);
+    }
   }
 
   @media (min-width: 430px){
@@ -228,11 +264,29 @@ img{
     .border__top-right{
       top: 11px;
       width: calc(100% - 400px - 16px);
-      height: calc(100% - 22px);
-      border-top: 1.5px solid rgba(255,255,255,.9);
+      height: calc(100% - 86.5px);
+      border-top: 1.4px solid rgba(255,255,255,.9);
+      animation: right-long-w .5s forwards;
     }
     .border__top-right.short{
-      height: calc(100% - 92px);
+      height: calc(100% - 22px);
+      animation: right-short-w .8s forwards .23s;
+    }
+    @keyframes right-short-w{
+      0%{
+        height: calc(100% - 22px);
+      }
+      100%{
+        height: calc(100% - 86.5px);
+      }
+    }
+    @keyframes right-long-w{
+      0%{
+        height: calc(100% - 86.5px);
+      }
+      100%{
+        height: calc(100% - 22px);
+      }
     }
     .border__bottom-left{
       top: 180px;
@@ -425,8 +479,7 @@ img{
   }
   details{
     margin: 0 auto;
-    max-width: 580px;
-    /* padding: 0 50px; */
+    max-width: 400px;
   }
   details + details{
     margin-top: 10px;
@@ -603,21 +656,27 @@ img{
 
 /* ↓↓　contact　↓↓ */
 
-  .contact h1,
-  .contact p{
-    color: black;
-    text-align: center;
-    margin: 16px 0 0;
-  }
-  .contact a{
-    color:black;
-  }
-  .contact a:hover{
-    color: var(--himawari);
-  }
   .contact{
     margin-bottom: 100px;
     text-align: center;
+  }
+  .contact__mail{
+    margin: 16px;
+  }
+  .contact__mail a{
+    text-decoration: underline;
+    transition: color .3s;
+  }
+  .contact__mail a:hover{
+    color: var(--himawari);
+  }
+  .contact__icon{
+    color:black;
+    font-size: 20px;
+    transition: color .3s;
+  }
+  .contact__icon:hover{
+    color: var(--himawari);
   }
 
 /* ↑↑　contact　↑↑ */
