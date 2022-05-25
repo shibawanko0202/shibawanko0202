@@ -83,7 +83,7 @@ img{
     font-family: 'Kaisei HarunoUmi', serif;
     font-size: 24px;
   }
-  .monkeybord span{
+  .monkeybord .no{
     font-family: 'Kaisei HarunoUmi', serif;
     font-size: 19px;
   }
@@ -178,7 +178,7 @@ img{
   .top{
     pointer-events: none;
     transform: translateY(120px);
-    transition: transform 1s;
+    transition: transform 1s ease;
   }
   .top.show{
     transform: none;
@@ -616,6 +616,10 @@ img{
     flex: 1;
   }
   .works__list h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     margin: 8px;
   }
   .works__dl{
@@ -643,6 +647,7 @@ img{
   }
   .works__list-img{
     width: 300px;
+    height: 200px;
     border-radius: 4px;
     transition: all .3s;
   }
