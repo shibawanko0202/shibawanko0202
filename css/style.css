@@ -34,6 +34,13 @@ p{
   display: table;
   text-align: left;
 }
+p,dd{
+  letter-spacing: .1em;
+  line-height: 1.4em;
+}
+dt{
+  letter-spacing: .2em;
+}
 section + section{
   margin: 160px 40px;
 }
@@ -87,6 +94,19 @@ img{
 
 /* ↑↑　各サイト用フォント　↑↑ */
 
+/* ↓↓　カーニング(jsと連携、フォント変更の際は注意)　↓↓ */
+
+  .left-bracket-16px{
+    margin-left: -6px;
+  }
+  .right-bracket-16px{
+    margin-right: -6px;
+  }
+  .punctuation{
+    margin-right: -6px;
+  }
+
+/* ↑↑　カーニング(jsと連携、フォント変更の際は注意)　↑↑ */
 
 /* ↓↓　ロード画面　↓↓ */
 
@@ -125,6 +145,7 @@ img{
     object-fit: contain;
     display: none;
     /* opacity: .8; */
+    /* filter: grayscale(50%); */
   }
   .loading__img.show{
     display: block;
@@ -202,7 +223,7 @@ img{
     width: calc(100% - 92px);
   }
 
-  @media (min-width:430px){
+  @media (min-width: 430px){
 
     .border__top-right{
       top: 11px;
@@ -269,7 +290,7 @@ img{
     margin: 0 8px;
   }
 
-  @media (min-width:430px){
+  @media (min-width: 430px){
 
     .header__nav{
       position: absolute;
@@ -278,19 +299,20 @@ img{
 
   }
 
-  @media (min-width:500px){
+  @media (min-width: 495px){
 
     .header__nav{
-      top: 40px;
+      top: 44px;
       right: 10px;
     }
 
   }
 
-  @media (min-width:530px){
+  @media (min-width: 530px){
 
     .header__nav{
-      top: 12px;
+      top: 17px;
+      right: 16px;
     }
 
   }
@@ -379,6 +401,17 @@ img{
   .hero__list:nth-child(4) div{
     top: -3px;
     left: 14px;
+  }
+
+  @media (min-width: 800px){
+
+    .hero__lists{
+      padding-top: 300px;
+    }
+    .hero__list{
+      width: 15%;
+    }
+
   }
 
 /* ↑↑　hero　↑↑ */
@@ -568,67 +601,37 @@ img{
 /* ↑↑　works　↑↑ */
 
 
-/* contact */
+/* ↓↓　contact　↓↓ */
 
-.contact h1,
-.contact p{
-  color: black;
-  text-align: center;
-  margin: 16px 0 0;
-}
-.contact a{
-  color:black;
-}
-.contact a:hover{
-  color: var(--himawari);
-}
-.contact{
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-/* footer */
-
-footer{
-  text-align: center;
-  margin: 16px 0;
-}
-footer small{
-  color: black;
-  font-family: 'Sansita Swashed', cursive;
-}
-
-/* midium-small */
-
-
-/* midium */
-
-@media (min-width:550px){
-
-  nav ul li{
-    width: 40%;
-    /* margin: 40px 0 ; */
+  .contact h1,
+  .contact p{
+    color: black;
+    text-align: center;
+    margin: 16px 0 0;
+  }
+  .contact a{
+    color:black;
+  }
+  .contact a:hover{
+    color: var(--himawari);
+  }
+  .contact{
+    margin-bottom: 100px;
+    text-align: center;
   }
 
-}
+/* ↑↑　contact　↑↑ */
 
-/* large */
 
-@media (min-width:850px){
-  nav ul{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 400px 0;
-    margin: 0 60px;
-    justify-content: space-around;
+/* ↓↓　footer　↓↓ */
+
+  footer{
+    text-align: center;
+    margin: 16px 0;
   }
-  nav ul li{
-    width: 25%;
-    margin: 0 ;
-  }
-  nav ul li + li{
-    margin-top: 0;
+  footer small{
+    color: #fff;
+    font-family: 'Sansita Swashed', cursive;
   }
 
-}
+/* ↑↑　footer　↑↑ */
