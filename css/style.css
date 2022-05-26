@@ -183,7 +183,8 @@ img{
   .top{
     pointer-events: none;
     transform: translateY(120px);
-    transition: transform 1s ease;
+    transition: transform 1s;
+    transition-timing-function: ease;
   }
   .top.show{
     transform: none;
