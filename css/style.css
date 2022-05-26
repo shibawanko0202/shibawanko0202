@@ -13,6 +13,7 @@ body{
   margin: 0;
   background: rgb(209, 203, 203);
   font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 16px;
 }
 h1{
   color: black;
@@ -33,6 +34,8 @@ p{
 p,dd{
   letter-spacing: .1em;
   line-height: 1.4em;
+  text-indent: 1em;
+  /* font-feature-settings: "palt"; */
 }
 dt{
   letter-spacing: .2em;
@@ -61,7 +64,7 @@ img{
   .monte{
     font-family: 'huiji-subset', cursive;
   }
-  .monte-img{
+  .works__monte-logo{
     width: 150px;
     object-fit: contain;
   }
@@ -86,6 +89,10 @@ img{
   .monkeybord .no{
     font-family: 'Kaisei HarunoUmi', serif;
     font-size: 19px;
+  }
+  .works__shibata-logo{
+    width: 200px;
+    object-fit: contain;
   }
 
 /* ↑↑　各サイト用フォント　↑↑ */
@@ -118,7 +125,7 @@ img{
     background-color: #ddd;
     opacity: .95;
     z-index: 999;
-    transition: opacity 1s;
+    transition: opacity 2s;
   }
   .loading.loaded{
     opacity: 0;
@@ -140,13 +147,11 @@ img{
     transform: translate(-50%,-50%);
     object-fit: contain;
     display: none;
-    /* opacity: .8; */
-    /* filter: grayscale(50%); */
   }
   .loading__img.show{
     display: block;
   }
-
+  
 /* ↑↑　ロード画面　↑↑ */
 
 
@@ -196,15 +201,12 @@ img{
     right: 11px;
     width: calc(100% - 400px - 16px);
     height: calc(100% - (100vw / 10) - 86.5px);
-    /* height: calc(100% - (100vw / 10) - 22px); */
     border-right: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
-    /* transition: height 1.2s; */
     animation: right-long .5s forwards;
   }
   .border__top-right.short{
     height: calc(100% - (100vw / 10) - 22px);
-    /* height: calc(100% - (100vw / 10) - 86.5px); */
     animation: right-short .8s forwards .23s;
   }
   @keyframes right-short{
@@ -228,18 +230,15 @@ img{
     top: calc(100vw / 2.3);
     left: 11px;
     width: 100px;
-    /* width: calc(100% - 22px); */
     width: calc(100% - 86px);
     height: calc(100% - (100vw / 2.3) - 11px);
     border-bottom: 1.4px solid rgba(255,255,255,.9);
     border-left: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
-    /* transition: width 0s ; */
     animation: bottom-long .5s ease-in-out forwards;
   }
   .border__bottom-left.short{
     width: calc(100% - 22px);
-    /* width: calc(100% - 86px); */
     animation: bottom-short .8s forwards .23s;
   }
   @keyframes bottom-short{
@@ -382,7 +381,7 @@ img{
   .hero__himawari{
     width: 100%;
     height: 600px;
-    background-image: url(../img/himawari.jpg);
+    background-image: url(../img/himawari.webp);
     background-size: cover;
     background-position: 50% 20%;
     margin: 0 auto;
@@ -391,7 +390,6 @@ img{
     width: 100%;
     height: 601px;
     background: linear-gradient(rgba(0,0,0,0.4) 8%,rgba(0,0,0,0) 40%,rgba(209, 203, 203,1) 100%);
-    /* background: linear-gradient(rgba(0,0,0,0.4) 8%,rgba(0,0,0,0) 40%,rgb(91, 104, 114) 100%); */
   }
   .hero__lists{
     display: flex;
@@ -409,7 +407,6 @@ img{
     height: 60px;
     margin: 20px 12px;
     text-align: center;
-    /* outline: 1px solid pink; */
   }
   .hero__list a{
     display: block;
@@ -600,7 +597,7 @@ img{
 
 /* ↓↓　works　↓↓ */
 
-  .works ul{
+  .works__lists{
     display: flex;
     padding: 0;
     margin: 0 auto;
@@ -644,6 +641,20 @@ img{
     display: table;
     margin: 8px auto;
     text-align: left;
+  }
+  .works__monte-lists{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .works__monte-lists li{
+    width: 150px;
+    text-indent: 0;
+  }
+  .works__monte-lists li::before{
+    content: "◇";
+    font-size: 15px;
+    width: 16px;
   }
   .works__list-img{
     width: 300px;

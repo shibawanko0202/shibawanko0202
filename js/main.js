@@ -64,9 +64,14 @@
   function loaded(){
     loading.classList.add("loaded");
   };
+  function loaded_delay(){
+    setTimeout(()=>{
+      loading.classList.add("loaded");
+    },1500);//1.5秒くらいは表示したい
+  };
 
-  window.addEventListener("load",loaded);
-  setTimeout(loaded,5000); //5秒で強制終了
+  window.addEventListener("load",loaded_delay);
+  setTimeout(loaded,5000); //遅くても5秒で強制終了
 
 // ↑↑ loading画面の終了 ↑↑ ---------------
 
