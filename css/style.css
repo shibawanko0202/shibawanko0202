@@ -34,8 +34,6 @@ p{
 p,dd{
   letter-spacing: .1em;
   line-height: 1.4em;
-  text-indent: 1em;
-  /* font-feature-settings: "palt"; */
 }
 dt{
   letter-spacing: .2em;
@@ -184,7 +182,6 @@ img{
     pointer-events: none;
     transform: translateY(120px);
     transition: transform 1s;
-    transition-timing-function: ease;
   }
   .top.show{
     transform: none;
@@ -650,7 +647,6 @@ img{
   }
   .works__monte-lists li{
     width: 150px;
-    text-indent: 0;
   }
   .works__monte-lists li::before{
     content: "◇";
