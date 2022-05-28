@@ -51,7 +51,7 @@
       anime_count = 0;
     };
   };
-
+  
   setInterval(load_anime,300);
 
 // ↑↑ loadingアニメーション ↑↑ ---------------

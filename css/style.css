@@ -139,10 +139,10 @@ img{
   }
   .loading__img{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -62px;
+    left: -60px;
     width: 120px;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     object-fit: contain;
     display: none;
   }
@@ -209,6 +209,7 @@ img{
     height: calc(100% - (100vw / 10) - 22px);
     animation: right-short .8s forwards .23s;
   }
+
   @keyframes right-short{
     0%{
       height: calc(100% - (100vw / 10) - 22px);
@@ -225,6 +226,7 @@ img{
       height: calc(100% - (100vw / 10) - 22px);
     }
   }
+
   .border__bottom-left{
     position: fixed;
     top: calc(100vw / 2.3);
@@ -241,6 +243,7 @@ img{
     width: calc(100% - 22px);
     animation: bottom-short .8s forwards .23s;
   }
+
   @keyframes bottom-short{
     0%{
       width: calc(100% - 22px);
@@ -271,6 +274,7 @@ img{
       height: calc(100% - 22px);
       animation: right-short-w .8s forwards .23s;
     }
+
     @keyframes right-short-w{
       0%{
         height: calc(100% - 22px);
@@ -287,6 +291,7 @@ img{
         height: calc(100% - 22px);
       }
     }
+    
     .border__bottom-left{
       top: 180px;
       width: calc(100% - 22px);
@@ -351,7 +356,6 @@ img{
     }
 
   }
-
   @media (min-width: 495px){
 
     .header__nav{
@@ -360,7 +364,6 @@ img{
     }
 
   }
-
   @media (min-width: 530px){
 
     .header__nav{
@@ -519,6 +522,7 @@ img{
   details[open] .answer{
     animation: fadein .5s;
   }
+
   @keyframes fadein{
     0%{
       opacity: 0;
@@ -580,7 +584,6 @@ img{
     }
 
   }
-
   @media (min-width:620px){
 
     .skill__list{
