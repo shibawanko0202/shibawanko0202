@@ -59,13 +59,16 @@
 
 // ↓↓ loading画面の終了 ↓↓ ---------------
 
+  const body = document.querySelector("body");
   const loading = document.getElementById("loading");
 
   function loaded(){
     loading.classList.add("loaded");
+    body.classList.add("loaded");
   };
   function loaded_delay(){
     setTimeout(()=>{
+      body.classList.add("loaded");
       loading.classList.add("loaded");
     },1500);//1.5秒くらいは表示したい
   };
