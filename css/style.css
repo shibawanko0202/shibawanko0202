@@ -23,7 +23,7 @@ h1{
   color: black;
   text-align: center;
   font-size: 30px;
-  margin: 0;
+  margin: 40px;
   padding: 0;
   font-weight: normal;
   font-family: 'Sansita Swashed', cursive;
@@ -202,6 +202,7 @@ img{
     height: calc(100% - (100vw / 10) - 86.5px);
     border-right: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
+    z-index: 3;
     animation: right-long .5s forwards;
   }
   .border__top-right.short{
@@ -236,6 +237,7 @@ img{
     border-bottom: 1.4px solid rgba(255,255,255,.9);
     border-left: 1.4px solid rgba(255,255,255,.9);
     pointer-events: none;
+    z-index: 3;
     animation: bottom-long .5s ease-in-out forwards;
   }
   .border__bottom-left.short{
@@ -477,7 +479,7 @@ img{
     margin: 8px auto;
   }
   details{
-    margin: 0 auto;
+    margin: 40px auto 0;
     max-width: 400px;
   }
   details + details{
@@ -547,10 +549,7 @@ img{
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 40px;
-  }
-  .skill__list + li{
-    margin-top: 24px;
+    margin: 0 10px 20px;
   }
   .skill__list-img{
     width: 80px;
@@ -563,17 +562,10 @@ img{
 
   @media (min-width:400px){
 
-    .skill__lists{
-      margin: 0 20px;
-    }
     .skill__list{
       display: flex;
       align-items: center;
       max-width: 400px;
-      margin: 0;
-    }
-    .skill__list + li{
-      margin-top: 40px;
     }
     .skill__list p{
       text-align: left;
@@ -588,8 +580,7 @@ img{
     .skill__list{
       display: block;
       width: 200px;
-      text-align: center;
-      margin: 40px 20px;
+      /* text-align: center; */
     }
 
   }
@@ -610,7 +601,7 @@ img{
     margin: 0 auto;
     min-width: 300px;
     max-width: 400px;
-    margin: 40px 24px 0;
+    margin: 0 24px 70px;
     text-align: center;
     flex: 1;
   }
