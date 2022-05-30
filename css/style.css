@@ -482,6 +482,7 @@ img{
   }
   .about__p-long{
     text-indent: 1em;
+    line-height: 1.6em;
   }
   details{
     margin: 40px auto 0;
