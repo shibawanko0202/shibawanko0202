@@ -129,7 +129,7 @@ img{
     background-color: #ddd;
     opacity: .95;
     z-index: 999;
-    transition: opacity 1.5s;
+    transition: opacity 1s linear;
   }
   .loading.loaded{
     opacity: 0;
@@ -484,64 +484,73 @@ img{
     text-indent: 1em;
     line-height: 1.6em;
   }
-  details{
-    margin: 40px auto 0;
+  .about__faq-list{
     max-width: 400px;
+    margin: 8px auto;
+    font-size: 14px;
   }
-  details + details{
-    margin-top: 10px;
-  }
-  summary{
+  .about__faq-dt{
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: start;
     height: 40px;
-    cursor: pointer;
-    outline: none;
+    padding: 0 30px 0 16px;
+    margin: 0 auto;
     background-color: rgb(185, 177, 173);
     border: 1px solid #fff;
-    padding: 5px 30px;
-    color: #fff;
-    transition: all .3s;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .3s;
   }
-  summary:hover{
+  .about__faq-dt:hover{
     background-color: rgba(255, 208, 0,0.3);
   }
-  summary::after{
-    content: "+";
-    color: #fff;
-    font-size: 21px;
-    line-height: 21px;
-    padding-bottom: 2px;
-    transition: transform 1s;
+  .about__faq-dt p{
+    width: calc(100% - 30px);
   }
-  details[open] summary::after{
-    transform: rotate(225deg);
+  .about__faq-wrapper{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
   }
-  summary::-webkit-details-marker{
-    display: none;
+  .about__faq-plus{
+    position: absolute;
+    top: 7px;
+    right: 14px;
+    width: 2px;
+    height: 16px;
+    border-radius: 1px;
+    background-color: #fff;
+    transition: transform .6s;
   }
-  .answer{
-    padding: 10px;
-    line-height: 1.6;
+  .about__faq-plus.open{
+    transform: rotate(270deg);
   }
-  .answer p{
-    padding: 0;
-    margin: 0;
+  .about__faq-minus{
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    transition: transform .6s .5s;
   }
-  details[open] .answer{
-    animation: fadein .5s;
+  .about__faq-minus.open{
+    transform: rotate(-180deg);
   }
-
-  @keyframes fadein{
-    0%{
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100%{
-      opacity: 1;
-      transform: none;
-    }
+  .about__faq-dd{
+    height:0px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all .3s;
+  }
+  .about__faq-dd-inner{
+    margin: 8px;
   }
 
 /* ↑↑　about　↑↑ */
@@ -558,7 +567,7 @@ img{
     display: block;
     width: 100%;
     text-align: center;
-    margin: 0 10px 20px;
+    margin: 0 10px 40px;
   }
   .skill__list-img{
     width: 80px;

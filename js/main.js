@@ -32,6 +32,7 @@
 
 // ↑↑ カーニング自動変換 ↑↑ ---------------
 
+
 // ↓↓ loadingアニメーション ↓↓ ---------------
 
   const loading_img = document.getElementsByClassName("loading__img");
@@ -138,3 +139,30 @@
 // ↑↑ hero__listの横移動 ↑↑ ---------------
 
 
+// ↓↓ アコーディオンメニューの開閉 ↓↓ ---------------
+
+  const plus = document.getElementsByClassName("about__faq-plus");
+  const minus = document.getElementsByClassName("about__faq-minus");
+  const question = document.getElementsByClassName("about__faq-dt");
+  const answer = document.getElementsByClassName("about__faq-dd");
+  const inner = document.getElementsByClassName("about__faq-dd-inner");
+
+  for(let i = 0;i < question.length;i++){
+
+    let height = inner[i].clientHeight;
+    answer[i].style.height = "0px";
+    
+    question[i].addEventListener("click",()=>{
+      height = inner[i].clientHeight;
+      plus[i].classList.toggle("open");
+      minus[i].classList.toggle("open");
+      answer[i].classList.toggle("open");
+      if(answer[i].style.height == "0px"){
+        answer[i].style.height = `${height + 16}px`;
+      } else {
+        answer[i].style.height = "0px";
+      };
+    });
+  };
+
+// ↑↑ アコーディオンメニューの開閉 ↑↑ ---------------
