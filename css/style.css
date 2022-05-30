@@ -480,6 +480,9 @@ img{
     max-width: 700px;
     margin: 8px auto;
   }
+  .about__p-long{
+    text-indent: 1em;
+  }
   details{
     margin: 40px auto 0;
     max-width: 400px;
