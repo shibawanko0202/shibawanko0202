@@ -99,6 +99,7 @@ img{
 
 /* ↑↑　各サイト用フォント　↑↑ */
 
+
 /* ↓↓　カーニング(jsと連携、フォント変更の際は注意)　↓↓ */
 
   .left-bracket-16px{
@@ -112,6 +113,7 @@ img{
   }
 
 /* ↑↑　カーニング(jsと連携、フォント変更の際は注意)　↑↑ */
+
 
 /* ↓↓　ロード画面　↓↓ */
 
@@ -489,6 +491,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 40px;
     cursor: pointer;
     outline: none;
     background-color: rgb(185, 177, 173);
@@ -504,6 +507,8 @@ img{
     content: "+";
     color: #fff;
     font-size: 21px;
+    line-height: 21px;
+    padding-bottom: 2px;
     transition: transform 1s;
   }
   details[open] summary::after{
