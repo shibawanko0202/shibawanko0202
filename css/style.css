@@ -50,9 +50,15 @@ img{
 }
 .anchor{
   position: relative;
-  top: -80px;
+  top: -130px;
   display: block;
 }
+@media (min-width: 620px){
+  .anchor{
+    top: -100px;
+  }
+}
+
 
 
 /* ↓↓　各サイト用フォント　↓↓ */
@@ -502,7 +508,7 @@ img{
     font-weight: normal;
     cursor: pointer;
     user-select: none;
-    z-index: 1;
+    /* z-index: 1; */
     transition: background-color .3s;
   }
   .about__faq-dt:hover{
@@ -530,7 +536,7 @@ img{
     will-change: transform;
     /* transition: transform .6s; */
     transition-property: transform;
-    transition-duration: .6s;
+    transition-duration: .6s !important;
   }
   .about__faq-plus.open{
     transform: rotate(270deg);
@@ -547,8 +553,8 @@ img{
     will-change: transform;
     /* transition: transform .6s .5s; */
     transition-property: transform;
-    transition-duration: .6s;
-    transition-delay: .5s;
+    transition-duration: .6s !important;
+    transition-delay: .5s !important;
   }
   .about__faq-minus.open{
     transform: rotate(-180deg);
