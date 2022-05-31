@@ -535,7 +535,7 @@ img{
     /* backface-visibility: hidden; */
     will-change: transform;
     /* transition: transform .6s; */
-    transition-property: transform;
+    transition-property: transform !important;
     transition-duration: .6s !important;
   }
   .about__faq-plus.open{
@@ -552,7 +552,7 @@ img{
     /* backface-visibility: hidden; */
     will-change: transform;
     /* transition: transform .6s .5s; */
-    transition-property: transform;
+    transition-property: transform !important;
     transition-duration: .6s !important;
     transition-delay: .5s !important;
   }
