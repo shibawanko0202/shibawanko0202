@@ -525,7 +525,8 @@ img{
     height: 16px;
     border-radius: 1px;
     background-color: #fff;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
+    will-change: transform;
     /* transition: transform .6s; */
     transition-property: transform;
     transition-duration: .6s;
@@ -541,7 +542,8 @@ img{
     height: 2px;
     border-radius: 1px;
     background-color: #fff;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
+    will-change: transform;
     /* transition: transform .6s .5s; */
     transition-property: transform;
     transition-duration: .6s;
