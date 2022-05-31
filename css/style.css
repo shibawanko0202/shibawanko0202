@@ -490,6 +490,9 @@ img{
     text-indent: 1em;
     line-height: 1.6em;
   }
+  .about__faq-lists{
+    margin-top: 30px;
+  }
   .about__faq-list{
     max-width: 400px;
     margin: 8px auto;
@@ -547,7 +550,7 @@ img{
     background-color: #fff;
     transition-property: transform;
     transition-duration: .6s;
-    /* transition-delay: .5s; */
+    transition-delay: .5s;
   }
   .about__faq-minus.open{
     transform: rotate(-180deg);
@@ -607,7 +610,6 @@ img{
     .skill__list{
       display: block;
       width: 200px;
-      /* text-align: center; */
     }
 
   }

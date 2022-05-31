@@ -151,11 +151,11 @@
 
     // ddの中身の高さを取得
     let height = inner[i].clientHeight;
-    // ddの高さを0pxに指定
+    // ddの最初の高さを0pxに指定
     answer[i].style.height = "0px";
     
     question[i].addEventListener("click",()=>{
-      
+
       // ウィンドウ幅が変わった時の為に毎回取得しとく
       height = inner[i].clientHeight;
 
