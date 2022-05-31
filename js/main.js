@@ -149,17 +149,24 @@
 
   for(let i = 0;i < question.length;i++){
 
+    // ddの中身の高さを取得
     let height = inner[i].clientHeight;
+    // ddの高さを0pxに指定
     answer[i].style.height = "0px";
     
     question[i].addEventListener("click",()=>{
+      
+      // ウィンドウ幅が変わった時の為に毎回取得しとく
       height = inner[i].clientHeight;
+
       plus[i].classList.toggle("open");
       minus[i].classList.toggle("open");
       answer[i].classList.toggle("open");
+
+      // ddが0pxなら伸ばす
       if(answer[i].style.height == "0px"){
         answer[i].style.height = `${height + 16}px`;
-      } else {
+      } else { // 高さがあるなら0pxにする
         answer[i].style.height = "0px";
       };
     });
