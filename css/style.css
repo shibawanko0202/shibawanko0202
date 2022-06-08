@@ -102,6 +102,9 @@ img{
     width: 200px;
     object-fit: contain;
   }
+  .memorandum{
+    font-size: 24px;
+  }
 
 /* ↑↑　各サイト用フォント　↑↑ */
 
@@ -664,15 +667,18 @@ img{
     margin: 8px auto;
     text-align: left;
   }
-  .works__monte-lists{
+  .works__dd--center{
+    text-align: center;
+  }
+  .works__dd-lists{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  .works__monte-lists li{
+  .works__dd-lists li{
     width: 150px;
   }
-  .works__monte-lists li::before{
+  .works__dd-lists li::before{
     content: "◇";
     font-size: 15px;
     width: 16px;

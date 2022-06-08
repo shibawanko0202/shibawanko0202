@@ -173,3 +173,17 @@
   };
 
 // ↑↑ アコーディオンメニューの開閉 ↑↑ ---------------
+
+
+// ↓↓ ブログ開設日の経過日の記述 ↓↓ ---------------
+
+  const blog_day = document.getElementById("blog_day");
+
+  var n = Date.parse("2022/06/06");
+  var m = new Date();
+  var day =(m - n)/1000/60/60/24;
+  day = Math.floor(day);
+
+  blog_day.textContent = day;
+
+// ↑↑ ブログ開設日の経過日の記述 ↑↑ ---------------
