@@ -65,15 +65,20 @@ img{
 
   @font-face{ 
     font-family: 'huiji-subset';
-    src: url('../fonts/ふい字\(サブセット\).ttf') format('truetype');
+    src: url('../fonts/ふい字サブセット.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-  .monte{
+  .monte,
+  .yotte{
     font-family: 'huiji-subset', cursive;
   }
   .works__monte-logo{
     width: 150px;
+    object-fit: contain;
+  }
+  .works__yotte-logo{
+    width: 120px;
     object-fit: contain;
   }
   .sokudoku{
